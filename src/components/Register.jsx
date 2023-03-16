@@ -75,6 +75,7 @@ function Register(props) {
             label="First Name"
             variant="outlined"
             value={firstName}
+            style={{ width: "100%", marginBottom: 10 }}
             onChange={(event) => setFirstName(event.target.value)}
           />
           {errors?.firstName && (
@@ -86,6 +87,7 @@ function Register(props) {
             className="textField"
             label="Last Name"
             variant="outlined"
+            style={{ width: "100%", marginBottom: 10 }}
             value={lastName}
             onChange={(event) => setLastName(event.target.value)}
           />
@@ -99,6 +101,7 @@ function Register(props) {
             label="Email"
             variant="outlined"
             value={email}
+            style={{ width: "100%", marginBottom: 10 }}
             onChange={(event) => setEmail(event.target.value)}
           />
           {errors?.email && (
@@ -111,6 +114,7 @@ function Register(props) {
             label="Password"
             variant="outlined"
             type="password"
+            style={{ width: "100%", marginBottom: 10 }}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
@@ -124,6 +128,7 @@ function Register(props) {
             label="Confirm Password"
             variant="outlined"
             type="password"
+            style={{ width: "100%", marginBottom: 10 }}
             value={confirmPassword}
             onChange={(event) => setConfirmPassword(event.target.value)}
           />
