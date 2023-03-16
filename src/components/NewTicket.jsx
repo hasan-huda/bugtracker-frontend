@@ -99,7 +99,7 @@ function NewTicket(props) {
               {errors.description.message}
             </Typography>
           )}
-          <FormControl className="textField"  >
+          <FormControl className="textField" style={{ width: "100%", marginBottom: 10 }} >
             <InputLabel htmlFor="project">Project</InputLabel>
             <Select
               value={projectId}
@@ -122,7 +122,7 @@ function NewTicket(props) {
               </Typography>
             )}
           </FormControl>
-          <FormControl className="textField">
+          <FormControl className="textField" style={{ width: "100%", marginBottom: 10 }}>
             <InputLabel htmlFor="priority">Priority</InputLabel>
             <Select
               value={priority}
