@@ -166,11 +166,10 @@ function Authentication(props) {
               onChange={(event) => setPassword(event.target.value)}
             />
             <Button
-              className="button"
               variant="contained"
               color="primary"
               type="submit"
-              style={{ marginTop: "1rem" }}
+              style={{ display: "block", margin: "0 auto" }}
             >
               Login
             </Button>
