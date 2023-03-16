@@ -47,7 +47,7 @@ function OwnProjects(props) {
     <div className="root2">
       <Grid container spacing={4}>
         <Grid item xs={12}>
-          <Typography variant="h4" className="header" style={{ fontWeight: "bold" }}>
+        <Typography variant="h4" className="header" style={{ fontWeight: "bold", marginTop: 40 }}>
             Projects
           </Typography>
           {logged.role !== "submitter" && (

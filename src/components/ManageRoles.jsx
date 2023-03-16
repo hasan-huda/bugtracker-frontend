@@ -81,7 +81,9 @@ function ManageRoles(props) {
 
   return (
     <div className="root2">
-      <h1>Manage Users </h1>
+      <Typography variant="h4" className="header" style={{ fontWeight: "bold", marginTop: 40 }}>
+            Manage Roles
+          </Typography>
       <List style={{ maxHeight: 400, overflow: "auto" }}>
         {users.map((user) => (
           <div key={user.id}>

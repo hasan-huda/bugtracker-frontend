@@ -80,7 +80,7 @@ function OneTicket(props) {
 
   return (
     <div className="root2">
-      <Grid container spacing={3}>
+      <Grid container spacing={3}  style={{ marginTop: 20 }}>
         <Grid item xs={12}>
           <Card>
             <CardContent>

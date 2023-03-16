@@ -61,7 +61,7 @@ function OwnTickets() {
     <div className="root2">
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Typography variant="h4" style={{ fontWeight: "bold" }} >
+        <Typography variant="h4" className="header" style={{ fontWeight: "bold", marginTop: 40 }}>
             Tickets
           </Typography>
         </Grid>

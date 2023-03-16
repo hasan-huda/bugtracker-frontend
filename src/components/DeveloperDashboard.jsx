@@ -22,7 +22,7 @@ const DeveloperDashboard = () => {
   };
   return (
     <div className="root2">
-      <Typography variant="h4" className="header" style={{ fontWeight: "bold" }}>
+      <Typography variant="h4" className="header"  style={{ fontWeight: "bold", marginTop: 40 }}>
             Dashboard
           </Typography>
       <Button

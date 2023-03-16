@@ -12,7 +12,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 function SimpleNavbar(props) {
   const { logged, logOut } = props;
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h6" style={{ flexGrow: 1 }}>
           Bug Tracker

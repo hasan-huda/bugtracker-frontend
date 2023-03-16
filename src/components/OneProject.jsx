@@ -83,7 +83,7 @@ function OneProject(props) {
   return (
     <>
       {project ? (
-        <Card className="rootProfile" >
+        <Card className="rootProfile"  style={{ marginTop: 20 }}>
           <CardContent>
             <Typography className="title" variant="h5">
               {project.name}
