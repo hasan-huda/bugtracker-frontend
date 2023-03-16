@@ -66,7 +66,7 @@ function OneTicket(props) {
     axios
       .delete(`${URL}/api/tickets/${id}`)
       .then(() => {
-        navigate("/userTickets");
+        navigate("/tickets");
       })
       .catch((err) => console.log(err));
   };

@@ -71,7 +71,7 @@ function OneProject(props) {
     axios
       .delete(`${URL}/api/projects/${id}`)
       .then(() => {
-        navigate("/");
+        navigate("/projects");
       })
       .catch((err) => console.log(err));
   };

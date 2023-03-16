@@ -76,6 +76,7 @@ function NewTicket(props) {
             label="Title"
             variant="outlined"
             value={title}
+            style={{ width: "100%", marginBottom: 10 }}
             onChange={(event) => setTitle(event.target.value)}
           />
           {errors?.title && (
@@ -89,6 +90,7 @@ function NewTicket(props) {
             multiline
             minRows={4}
             variant="outlined"
+            style={{ width: "100%", marginBottom: 10 }}
             value={description}
             onChange={(event) => setDescription(event.target.value)}
           />
@@ -97,10 +99,11 @@ function NewTicket(props) {
               {errors.description.message}
             </Typography>
           )}
-          <FormControl className="textField" >
+          <FormControl className="textField"  >
             <InputLabel htmlFor="project">Project</InputLabel>
             <Select
               value={projectId}
+              style={{ width: "100%", marginBottom: 10 }}
               onChange={(event) => setProjectId(event.target.value)}
               inputProps={{
                 name: "projectId",
@@ -123,6 +126,7 @@ function NewTicket(props) {
             <InputLabel htmlFor="priority">Priority</InputLabel>
             <Select
               value={priority}
+              style={{ width: "100%", marginBottom: 10 }}
               onChange={(event) => setPriority(event.target.value)}
               inputProps={{
                 name: "priority",
