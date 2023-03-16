@@ -122,12 +122,28 @@ function Authentication(props) {
           boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.3)",
         }}
       >
-        <CardContent>
-          <Typography className="title" variant="h5">
+        <CardContent
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            className="title"
+            variant="h5"
+            style={{ marginBottom: "1rem" }}
+          >
             Login
           </Typography>
           {errors && (
-            <Typography color="error" variant="body2" className="error">
+            <Typography
+              color="error"
+              variant="body2"
+              className="error"
+              style={{ marginBottom: "1rem", textAlign: "center" }}
+            >
               {errors.message}
             </Typography>
           )}
@@ -154,6 +170,7 @@ function Authentication(props) {
               variant="contained"
               color="primary"
               type="submit"
+              style={{ marginTop: "1rem" }}
             >
               Login
             </Button>

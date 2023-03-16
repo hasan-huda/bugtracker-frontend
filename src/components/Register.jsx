@@ -65,88 +65,89 @@ function Register(props) {
         boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.3)",
       }}
     >
-      <CardContent>
-        <Typography className="title" variant="h5">
-          Register
-        </Typography>
-        <form className="form" onSubmit={handleSubmit}>
-          <TextField
-            className="textField"
-            label="First Name"
-            variant="outlined"
-            value={firstName}
-            style={{ width: "100%", marginBottom: 10 }}
-            onChange={(event) => setFirstName(event.target.value)}
-          />
-          {errors?.firstName && (
-            <Typography color="error" variant="body2">
-              {errors.firstName.message}
-            </Typography>
-          )}
-          <TextField
-            className="textField"
-            label="Last Name"
-            variant="outlined"
-            style={{ width: "100%", marginBottom: 10 }}
-            value={lastName}
-            onChange={(event) => setLastName(event.target.value)}
-          />
-          {errors?.lastName && (
-            <Typography color="error" variant="body2">
-              {errors.lastName.message}
-            </Typography>
-          )}
-          <TextField
-            className="textField"
-            label="Email"
-            variant="outlined"
-            value={email}
-            style={{ width: "100%", marginBottom: 10 }}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-          {errors?.email && (
-            <Typography color="error" variant="body2">
-              {errors.email.message}
-            </Typography>
-          )}
-          <TextField
-            className="textField"
-            label="Password"
-            variant="outlined"
-            type="password"
-            style={{ width: "100%", marginBottom: 10 }}
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
-          {errors?.password && (
-            <Typography color="error" variant="body2">
-              {errors.password.message}
-            </Typography>
-          )}
-          <TextField
-            className="textField"
-            label="Confirm Password"
-            variant="outlined"
-            type="password"
-            style={{ width: "100%", marginBottom: 10 }}
-            value={confirmPassword}
-            onChange={(event) => setConfirmPassword(event.target.value)}
-          />
-          {errors?.confirmPassword && (
-            <Typography color="error" variant="body2">
-              {errors.confirmPassword.message}
-            </Typography>
-          )}
-          <Button
-            className="button"
-            variant="contained"
-            color="primary"
-            type="submit"
-          >
-            Register
-          </Button>
-        </form>
-      </CardContent>
+<CardContent>
+  <Typography className="title" variant="h5" style={{ textAlign: "center" }}>
+    Register
+  </Typography>
+  <form className="form" onSubmit={handleSubmit}>
+    <TextField
+      className="textField"
+      label="First Name"
+      variant="outlined"
+      value={firstName}
+      style={{ width: "100%", marginBottom: 10 }}
+      onChange={(event) => setFirstName(event.target.value)}
+    />
+    {errors?.firstName && (
+      <Typography color="error" variant="body2">
+        {errors.firstName.message}
+      </Typography>
+    )}
+    <TextField
+      className="textField"
+      label="Last Name"
+      variant="outlined"
+      style={{ width: "100%", marginBottom: 10 }}
+      value={lastName}
+      onChange={(event) => setLastName(event.target.value)}
+    />
+    {errors?.lastName && (
+      <Typography color="error" variant="body2">
+        {errors.lastName.message}
+      </Typography>
+    )}
+    <TextField
+      className="textField"
+      label="Email"
+      variant="outlined"
+      value={email}
+      style={{ width: "100%", marginBottom: 10 }}
+      onChange={(event) => setEmail(event.target.value)}
+    />
+    {errors?.email && (
+      <Typography color="error" variant="body2">
+        {errors.email.message}
+      </Typography>
+    )}
+    <TextField
+      className="textField"
+      label="Password"
+      variant="outlined"
+      type="password"
+      style={{ width: "100%", marginBottom: 10 }}
+      value={password}
+      onChange={(event) => setPassword(event.target.value)}
+    />
+    {errors?.password && (
+      <Typography color="error" variant="body2">
+        {errors.password.message}
+      </Typography>
+    )}
+    <TextField
+      className="textField"
+      label="Confirm Password"
+      variant="outlined"
+      type="password"
+      style={{ width: "100%", marginBottom: 10 }}
+      value={confirmPassword}
+      onChange={(event) => setConfirmPassword(event.target.value)}
+    />
+    {errors?.confirmPassword && (
+      <Typography color="error" variant="body2">
+        {errors.confirmPassword.message}
+      </Typography>
+    )}
+    <Button
+      className="button"
+      variant="contained"
+      color="primary"
+      type="submit"
+      style={{ display: "block", margin: "0 auto" }}
+    >
+      Register
+    </Button>
+  </form>
+</CardContent>
       <CardActions>
         <Typography>
           Already have an account? <Link to={"/"}> Login here</Link>
