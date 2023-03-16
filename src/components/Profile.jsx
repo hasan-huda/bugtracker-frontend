@@ -10,10 +10,9 @@ import {
   Divider,
   Typography,
   TextField,
-} from '@mui/material';
-import './Profile.css'
+} from "@mui/material";
+import "./Profile.css";
 import { URL } from "../App";
-
 
 function Profile(props) {
   const { logged, logIn } = props;
@@ -113,14 +112,20 @@ function Profile(props) {
         </form>
       </CardContent>
       <CardActions>
-        <Button
-          className="button2"
-          variant="contained"
-          color="secondary"
-          onClick={handleClick}
-        >
-          Change Password
-        </Button>
+        {logged.role === "Admin" ? (
+          <Typography>
+            No Password Change for this Admin Account Allowed
+          </Typography>
+        ) : (
+          <Button
+            className="button2"
+            variant="contained"
+            color="secondary"
+            onClick={handleClick}
+          >
+            Change Password
+          </Button>
+        )}
       </CardActions>
     </Card>
   );
