@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  flex-grow: 1;
+  padding: 16px;
+  }
+  
+  .paper {
+  padding: 16px;
+  color: #000000;
+  }
+  
+  .button {
+  margin-top: 30px;
+  margin-right: 10px;
+  }
+  
+  .button2 {
+  margin-top: 1px;
+  margin-bottom: 5px;
+  }
+  
+  .title {
+  margin-bottom: 16px;
+  }
+  
+  .mTop {
+  margin-top: 15px;
+  margin-bottom: 7px;
+  }
+  
+  .mBottom {
+  margin-top: 5px;
+  margin-bottom: 13px;
+  }
+  
+  .formControl {
+  margin: 8px;
+  min-width: 120px;
+  }
+  
+  .description {
+  margin-bottom: 16px;
+  }
+  
+  .buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  }

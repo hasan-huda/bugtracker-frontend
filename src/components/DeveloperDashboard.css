@@ -1,0 +1,14 @@
+.root {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.card {
+  height: 200px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}

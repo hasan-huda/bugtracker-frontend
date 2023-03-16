@@ -1,0 +1,19 @@
+.root {
+  flex-grow: 1;
+  padding: 8px;
+}
+
+.paper {
+  padding: 16px;
+  color: #000;
+  margin-bottom: 5px;
+  background-color: #e1f5fe;
+}
+
+.button {
+  margin-top: 10px;
+}
+
+.title {
+  margin-bottom: 16px;
+}
