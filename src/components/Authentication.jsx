@@ -9,6 +9,7 @@ import {
   CardActions,
   Typography,
   ButtonGroup,
+  CircularProgress
 } from "@mui/material";
 import { URL } from "../App";
 import "./Authentication.css";
@@ -19,97 +20,108 @@ function Authentication(props) {
   const [password, setPassword] = useState("");
   const { logIn } = props;
   const [errors, setErrors] = useState(null);
+  const [logging, setLogging] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLogging(true);
     axios
       .post(`${URL}/api/users/login`, {
         email,
         password,
       })
       .then((res) => {
-        console.log(res.data);
         logIn(res.data);
+        setLogging(false);
         navigate("/dashboard");
       })
       .catch((err) => {
-        console.log(err);
+        setLogging(false);
         setErrors(err.response.data);
       });
   };
 
   const handleAdminLogin = (e) => {
     e.preventDefault();
-    console.log(URL);
+    setLogging(true);
     axios
       .post(`${URL}/api/users/login`, {
         email: "admin@gmail.com",
         password: "12345678",
       })
       .then((res) => {
-        console.log(res.data);
         logIn(res.data);
+        setLogging(false);
         navigate("/dashboard");
       })
       .catch((err) => {
-        console.log(err);
+        setLogging(false);
         setErrors(err.response.data);
       });
   };
   const handlePMLogin = (e) => {
     e.preventDefault();
+    setLogging(true);
     axios
       .post(`${URL}/api/users/login`, {
         email: "pm@gmail.com",
         password: "qweasdzxc",
       })
       .then((res) => {
-        console.log(res.data);
+        setLogging(false);
         logIn(res.data);
         navigate("/dashboard");
       })
       .catch((err) => {
-        console.log(err);
+        setLogging(false);
         setErrors(err.response.data);
       });
   };
   const handleDevLogin = (e) => {
     e.preventDefault();
+    setLogging(true);
     axios
       .post(`${URL}/api/users/login`, {
         email: "dev@gmail.com",
         password: "qweasdzxc",
       })
       .then((res) => {
-        console.log(res.data);
+        setLogging(false);
         logIn(res.data);
         navigate("/dashboard");
       })
       .catch((err) => {
-        console.log(err);
+        setLogging(false);
         setErrors(err.response.data);
       });
   };
   const handleSubLogin = (e) => {
     e.preventDefault();
+    setLogging(true);
     axios
       .post(`${URL}/api/users/login`, {
         email: "sub@gmail.com",
         password: "qweasdzxc",
       })
       .then((res) => {
-        console.log(res.data);
+        setLogging(false);
         logIn(res.data);
         navigate("/dashboard");
       })
       .catch((err) => {
-        console.log(err);
+        setLogging(false);
         setErrors(err.response.data);
       });
   };
 
   return (
     <>
+    {logging && (
+        <div style={{ textAlign: 'center', margin: '20px' }}>
+          <CircularProgress />
+          <p>Logging in...</p>
+        </div>
+      )}
       <Card
         className="rootAuth"
         style={{
