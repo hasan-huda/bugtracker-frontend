@@ -22,6 +22,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import EditProject from "./components/EditProject";
 
 
 export const URL = process.env.REACT_APP_SERVER_URL;
@@ -114,6 +115,10 @@ function App() {
               <Route
                 path="/projects/:id"
                 element={<OneProject logged={logged} />}
+              />
+              <Route
+                path="/projects/:id/edit"
+                element={<EditProject logged={logged} />}
               />
               <Route
                 path="/projects/:id/addUsers"
